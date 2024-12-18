@@ -1032,3 +1032,201 @@ footer {
     transform: scale(1.01);
     transition: transform 0.3s ease;
 }
+
+/* Base Mobile Responsive Styles */
+@media (max-width: 768px) {
+    /* General Text Scaling */
+    h1 {
+        font-size: 2rem !important;
+    }
+
+    h2 {
+        font-size: 1.75rem !important;
+    }
+
+    h3 {
+        font-size: 1.25rem !important;
+    }
+
+    p {
+        font-size: 0.95rem !important;
+    }
+
+    /* Section Padding */
+    section {
+        padding: 3rem 1rem !important;
+    }
+
+    /* Container Width */
+    .container {
+        width: 95% !important;
+        padding: 0 15px !important;
+    }
+
+    /* Hero Section */
+    .hero {
+        min-height: 80vh !important;
+        padding: 2rem 1rem !important;
+    }
+
+    .hero h1 {
+        margin-bottom: 1rem !important;
+    }
+
+    /* Tech Stack Grid */
+    .tech-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        gap: 1rem !important;
+    }
+
+    .tech-logo {
+        scale: 0.9;
+    }
+
+    .tech-logo span {
+        font-size: 0.8rem !important;
+    }
+
+    /* Projects Section */
+    .project-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem !important;
+    }
+
+    .project-card {
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 350px !important;
+    }
+
+    /* Contact Section */
+    .contact-container {
+        padding: 1rem !important;
+    }
+
+    .contact-info {
+        grid-template-columns: 1fr !important;
+    }
+
+    .contact-form {
+        padding: 1.5rem !important;
+    }
+
+    .input-group {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* Form Elements */
+    .input-field input,
+    .input-field textarea {
+        font-size: 16px !important; /* Prevents zoom on iOS */
+        padding: 0.7rem !important;
+    }
+
+    .submit-btn {
+        padding: 0.8rem !important;
+    }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+    /* Further Text Scaling */
+    h1 {
+        font-size: 1.75rem !important;
+    }
+
+    h2 {
+        font-size: 1.5rem !important;
+    }
+
+    /* Tech Stack Grid */
+    .tech-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    /* Navigation */
+    .nav-links {
+        gap: 1rem !important;
+    }
+
+    .nav-links a {
+        font-size: 0.9rem !important;
+    }
+
+    /* Social Links */
+    .social-links {
+        gap: 0.8rem !important;
+    }
+
+    .social-icon {
+        width: 35px !important;
+        height: 35px !important;
+    }
+}
+
+/* Landscape Mode */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero {
+        min-height: 100vh !important;
+        padding: 1rem !important;
+    }
+
+    .section {
+        padding: 2rem 1rem !important;
+    }
+}
+
+/* Tablet Devices */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .tech-grid {
+        grid-template-columns: repeat(4, 1fr) !important;
+    }
+
+    .project-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+
+    section {
+        padding: 4rem 2rem !important;
+    }
+}
+
+/* Fix for iOS Safari 100vh Issue */
+@supports (-webkit-touch-callout: none) {
+    .hero {
+        min-height: -webkit-fill-available !important;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) {
+    /* Remove hover effects on touch devices */
+    .tech-logo:hover,
+    .project-card:hover,
+    .social-icon:hover {
+        transform: none !important;
+    }
+
+    /* Increase touch targets */
+    .nav-links a,
+    .social-icon,
+    .submit-btn {
+        padding: 12px !important;
+    }
+}
+
+/* High DPI Screens */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Fix for Notched Phones */
+@supports (padding: max(0px)) {
+    .hero,
+    .nav-container {
+        padding-left: max(1rem, env(safe-area-inset-left)) !important;
+        padding-right: max(1rem, env(safe-area-inset-right)) !important;
+    }
+}
